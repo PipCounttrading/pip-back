@@ -28,6 +28,10 @@ const userSchema = new mongoose.Schema({
     type: Number,
     default: 0,
   },
+  pendingProfit: {
+    type: Number,
+    default: 0,
+  },
   withdrawal: {
     type: Number,
     default: 0,
@@ -47,8 +51,8 @@ const userSchema = new mongoose.Schema({
   },
   active: {
     type: Boolean,
-    default: false
-  }
+    default: false,
+  },
 });
 
 export default mongoose.model('User', userSchema);
